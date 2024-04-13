@@ -30,8 +30,8 @@ def get_recommendations(title, cosine_sim=cosine_sim):
 
 
 st.header('tech jobs recommender')
-movies = pickle.load(open('job_list.pkl','rb'))
-similarity = pickle.load(open('similarity.pkl','rb'))
+movies = pickle.load(open('job_list.pkl','wb'))
+similarity = pickle.load(open('similarity.pkl','wb'))
 
 toon_list = movies['jobtitle'].values
 selected_toon = st.selectbox(
